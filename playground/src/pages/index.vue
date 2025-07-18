@@ -2,11 +2,11 @@
   <div class="page page-pet-store">
     <div class="page-content">
       <h1>Pet Store API 示例</h1>
-      
+
       <!-- Pet 相关操作 -->
       <section class="api-section">
         <h2>Pet 管理</h2>
-        
+
         <div class="api-group">
           <h3>查找宠物</h3>
           <div class="form-group">
@@ -80,7 +80,7 @@
       <!-- Store 相关操作 -->
       <section class="api-section">
         <h2>Store 管理</h2>
-        
+
         <div class="api-group">
           <h3>获取库存信息</h3>
           <button @click="getInventory">获取库存</button>
@@ -130,7 +130,7 @@
       <!-- User 相关操作 -->
       <section class="api-section">
         <h2>User 管理</h2>
-        
+
         <div class="api-group">
           <h3>用户登录</h3>
           <div class="form-group">
@@ -225,16 +225,16 @@ const newUser = reactive({
 // API 调用方法
 const findPetsByStatus = async () => {
   if (!petStatus.value) return;
-  
+
   try {
     errorMessage.value = '';
     const [error, result] = await findPetsByStatusAdapter({ status: petStatus.value });
-    
+
     if (error) {
       errorMessage.value = `查找宠物失败: ${error.message || error}`;
       return;
     }
-    
+
     petsByStatus.value = result || [];
   } catch (err) {
     errorMessage.value = `查找宠物异常: ${err.message}`;
@@ -243,16 +243,16 @@ const findPetsByStatus = async () => {
 
 const getPetById = async () => {
   if (!petId.value) return;
-  
+
   try {
     errorMessage.value = '';
     const [error, result] = await getPetByIdAdapter({ petId: petId.value });
-    
+
     if (error) {
       errorMessage.value = `获取宠物失败: ${error.message || error}`;
       return;
     }
-    
+
     selectedPet.value = result;
   } catch (err) {
     errorMessage.value = `获取宠物异常: ${err.message}`;
@@ -261,7 +261,7 @@ const getPetById = async () => {
 
 const addPet = async () => {
   if (!newPet.name) return;
-  
+
   try {
     errorMessage.value = '';
     const petData = {
@@ -269,14 +269,14 @@ const addPet = async () => {
       status: newPet.status,
       category: newPet.category ? { name: newPet.category } : undefined
     };
-    
+
     const [error, result] = await addPetAdapter(petData);
-    
+
     if (error) {
       errorMessage.value = `添加宠物失败: ${error.message || error}`;
       return;
     }
-    
+
     // 清空表单
     newPet.name = '';
     newPet.category = '';
@@ -290,12 +290,12 @@ const getInventory = async () => {
   try {
     errorMessage.value = '';
     const [error, result] = await getInventoryAdapter({});
-    
+
     if (error) {
       errorMessage.value = `获取库存失败: ${error.message || error}`;
       return;
     }
-    
+
     inventory.value = result;
   } catch (err) {
     errorMessage.value = `获取库存异常: ${err.message}`;
@@ -304,7 +304,7 @@ const getInventory = async () => {
 
 const placeOrder = async () => {
   if (!order.petId || !order.quantity) return;
-  
+
   try {
     errorMessage.value = '';
     const orderData = {
@@ -312,14 +312,14 @@ const placeOrder = async () => {
       quantity: parseInt(order.quantity),
       status: order.status
     };
-    
+
     const [error, result] = await placeOrderAdapter(orderData);
-    
+
     if (error) {
       errorMessage.value = `下订单失败: ${error.message || error}`;
       return;
     }
-    
+
     placedOrder.value = result;
     // 清空表单
     order.petId = '';
@@ -331,19 +331,19 @@ const placeOrder = async () => {
 
 const loginUser = async () => {
   if (!loginForm.username || !loginForm.password) return;
-  
+
   try {
     errorMessage.value = '';
     const [error, result] = await loginUserAdapter({
       username: loginForm.username,
       password: loginForm.password
     });
-    
+
     if (error) {
       errorMessage.value = `登录失败: ${error.message || error}`;
       return;
     }
-    
+
     loginResult.value = result;
   } catch (err) {
     errorMessage.value = `登录异常: ${err.message}`;
@@ -352,7 +352,7 @@ const loginUser = async () => {
 
 const createUser = async () => {
   if (!newUser.username || !newUser.email || !newUser.password) return;
-  
+
   try {
     errorMessage.value = '';
     const userData = {
@@ -360,14 +360,14 @@ const createUser = async () => {
       email: newUser.email,
       password: newUser.password
     };
-    
+
     const [error, result] = await createUserAdapter(userData);
-    
+
     if (error) {
       errorMessage.value = `创建用户失败: ${error.message || error}`;
       return;
     }
-    
+
     // 清空表单
     newUser.username = '';
     newUser.email = '';
@@ -435,25 +435,6 @@ const createUser = async () => {
             border-radius: 4px;
             flex: 1;
             max-width: 200px;
-          }
-
-          button {
-            padding: 8px 16px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background 0.3s;
-
-            &:hover {
-              background: #2980b9;
-            }
-
-            &:disabled {
-              background: #bdc3c7;
-              cursor: not-allowed;
-            }
           }
         }
 
@@ -565,6 +546,25 @@ const createUser = async () => {
       }
     }
 
+    button {
+      padding: 8px 16px;
+      background: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #2980b9;
+      }
+
+      &:disabled {
+        background: #bdc3c7;
+        cursor: not-allowed;
+      }
+    }
+
     .error-message {
       margin-top: 20px;
       padding: 15px;
@@ -584,4 +584,4 @@ const createUser = async () => {
     }
   }
 }
-</style> 
+</style>

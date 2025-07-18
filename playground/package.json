@@ -17,17 +17,16 @@
   },
   "dependencies": {
     "@domain/domain-pet-store": "workspace:*",
+    "@domain/pet-store-sdk": "workspace:*",
     "@winner-fed/cloud-utils": "^2.0.1",
     "@winner-fed/magicless": "*",
     "@winner-fed/winjs": "^0.15.1"
   },
   "devDependencies": {
     "@winner-fed/f2elint": "^3.0.0",
-    "@winner-fed/plugin-request": "^1.0.1",
     "cross-env": "^7.0.3",
     "lint-staged": "13.2.3",
     "typescript": "^5.0.3"
-  },
-  "buildVersion": "V202101-00-000"
+  }
 }
 

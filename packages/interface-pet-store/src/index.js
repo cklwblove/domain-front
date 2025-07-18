@@ -38,7 +38,6 @@ export default function createPetStoreHttpRequest(config) {
   } = config;
 
   const httpClient = new HttpClient(config);
-
   // 是否开启 mock 模式
   getGlobalThis().____MOCK_MODE = mock;
   // 支持自定义配置 Mock URL
