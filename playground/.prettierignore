@@ -1,0 +1,13 @@
+**/*.svg
+output.js
+src/assets/
+dist/**
+public/**
+src/services/RESTFULURL.js
+src/icons
+src/.win
+src/.win-production
+.npmrc
+.yarnrc
+node_modules
+

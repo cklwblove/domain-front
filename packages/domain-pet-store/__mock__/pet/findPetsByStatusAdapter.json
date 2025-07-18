@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "friendly"
+      }
+    ],
+    "status": "available"
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 2,
+      "name": "Cats"
+    },
+    "name": "kitty",
+    "photoUrls": ["http://example.com/photo2.jpg"],
+    "tags": [
+      {
+        "id": 2,
+        "name": "cute"
+      }
+    ],
+    "status": "available"
+  }
+]
