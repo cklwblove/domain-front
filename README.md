@@ -25,7 +25,8 @@ _数据层 -> 逻辑层 -> 视图层_
 1. Domain：处理业务数据逻辑，最大程度提高代码的复用性
 2. View：处理视图层的交互逻辑，比如，路由跳转，事件等
 
-![前端流程图](./assets/domain-flow.jpeg) 后端数据（Data） -> Repository 数据映射层(Model-Mapper) -> 前端领域对象 FDO(FrontEnd Domain Object) -> 数据转换层（Adapter）->提供给业务视图(Business View Model)使用
+![前端流程图](./assets/domain-flow.jpeg) 
+后端数据（Data） -> Repository 数据映射层(Model-Mapper) -> 前端领域对象 FDO(FrontEnd Domain Object) -> 数据转换层（Adapter）->提供给业务视图(Business View Model)使用
 
 ## 架构图
 
