@@ -231,21 +231,17 @@ npm run gen:docs
 // 启用 Mock 模式
 const httpClient = createPetStoreHttpRequest({
   mock: true,
-  mockURL: 'http://localhost:3000/mock'
+  mockURL: 'http://localhost:8000/mock'
 });
 
 // 或者全局设置
 window.____MOCK_MODE = true;
-window.____MOCK_URL = 'http://localhost:3000/mock';
+window.____MOCK_URL = 'http://localhost:8000/mock';
 ```
 
 ## 📄 许可证
 
 Apache-2.0 License
-
-## 👥 贡献者
-
-- **cklwblove** - 初始开发
 
 ## 🔗 相关链接
 

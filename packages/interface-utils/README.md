@@ -472,10 +472,6 @@ import { isString, safeJsonParse } from '@domain/interface-utils';
 
 Apache-2.0 License
 
-## 👥 贡献者
-
-- **cklwblove** - 初始开发
-
 ## 🔗 相关链接
 
 - [qs](https://github.com/ljharb/qs) - 查询字符串处理库

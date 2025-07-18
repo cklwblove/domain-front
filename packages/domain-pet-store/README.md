@@ -173,19 +173,9 @@ window.____MOCK_MODE = true;
 - `lodash-es`: 工具函数库
 - `await-to-js`: 异步错误处理
 
-### 测试
-
-```bash
-# 运行测试
-npm test
-
-# 运行特定测试
-npm test pet.test.js
-```
-
 ## 📄 许可证
 
-ISC License
+Apache-2.0 License
 
 ## 🔗 相关链接
 
