@@ -1,0 +1,17 @@
+pnpm-lock.yaml
+dist/
+temp/
+LICENSE.md
+pnpm-workspace.yaml
+# prettier doesn't respect newlines between chained methods
+# https://github.com/prettier/prettier/issues/7884
+**/*.spec.js
+**/*.spec.ts
+**/dist
+playground/
+scripts/
+packages/**/docs-**
+packages/interface-**/src/services/**
+.history
+coverage
+

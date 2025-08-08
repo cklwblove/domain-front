@@ -1,0 +1,6 @@
+node_modules/
+config/
+dist/
+src/assets/fonts/
+public/
+

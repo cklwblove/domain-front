@@ -1,0 +1,50 @@
+{
+  "name": "@domain/interface-utils",
+  "version": "0.0.1",
+  "description": "interface utils for domain.",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "type": "module",
+  "author": "cklwblove",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "keywords": [
+    "request",
+    "interface",
+    "utils"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "release": "bumpp --commit --push --tag && pnpm publish"
+  },
+  "dependencies": {
+    "qs": "^6.10.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.1",
+    "tsup": "^6.1.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

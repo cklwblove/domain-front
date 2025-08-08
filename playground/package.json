@@ -1,0 +1,32 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "private": true,
+  "author": "liwb <lwbhtml@163.com>",
+  "scripts": {
+    "build": "cross-env WIN_APP_ENV=production win build",
+    "dev": "win dev",
+    "f2elint-fix": "f2elint fix --include src",
+    "f2elint-scan": "f2elint scan --include src",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx,css,less,scss,vue,html,md}\" \"package.json\"",
+    "postinstall": "win setup",
+    "lint": "win lint",
+    "preview": "win preview",
+    "setup": "win setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@domain/domain-pet-store": "workspace:*",
+    "@domain/pet-store-sdk": "workspace:*",
+    "@winner-fed/cloud-utils": "^2.0.1",
+    "@winner-fed/magicless": "*",
+    "@winner-fed/winjs": "^0.15.1"
+  },
+  "devDependencies": {
+    "@winner-fed/f2elint": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "lint-staged": "13.2.3",
+    "typescript": "^5.0.3"
+  }
+}
+

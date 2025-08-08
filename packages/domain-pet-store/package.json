@@ -1,0 +1,16 @@
+{
+  "name": "@domain/domain-pet-store",
+  "version": "0.0.1",
+  "description": "domain design for the pet store.",
+  "main": "index.js",
+  "author": "cklwblove <lwbhtml@163.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@domain/interface-utils": "workspace:^",
+    "lodash-es": "^4.17.21",
+    "await-to-js": "^3.0.0"
+  },
+  "devDependencies": {
+    "@domain/pet-store-sdk": "workspace:^"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "strict": false,
+    "strictNullChecks": false,
+    "typeRoots": ["src/types", "node_modules/@types"]
+  },
+  "include": ["src", "tsup.config.ts"],
+  "typedocOptions": {
+    "name": "interface utils",
+    "out": "docs",
+    "theme": "default",
+    "entryPoints": ["src/index.ts"],
+    "includeVersion": true,
+    "hideGenerator": true
+  }
+}

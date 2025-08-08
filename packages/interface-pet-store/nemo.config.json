@@ -1,0 +1,24 @@
+{
+  "origins": [
+    {
+      "name": "petstore",
+      "description": "Pet Store API",
+      "originUrl": "./petstore-swagger.json"
+    }
+  ],
+  "templatePath": "./nemoTemplate",
+  "transformPath": "./nemoTransform",
+  "outDir": "./src/services/petstore",
+  "languageType": "javaScript",
+  "mocks": {
+    "enable": true
+  },
+  "templateType": "fetch",
+  "originType": "swagger",
+  "prettierConfig": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}

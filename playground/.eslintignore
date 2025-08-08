@@ -1,0 +1,13 @@
+node_modules/
+config/
+public/
+src/assets/
+/src/.win
+/src/.win-production
+/src/.win-test
+/.win
+/.win-production
+/.win-test
+/dist
+/dist-zip
+

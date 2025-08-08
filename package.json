@@ -1,0 +1,60 @@
+{
+  "name": "domain-service-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Collection of service interfaces",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@10.4.0",
+  "scripts": {
+    "bootstrap": "pnpm i && pnpm build",
+    "preinstall": "npx only-allow pnpm",
+    "clean:top": "rimraf */**/dist */**/types */dist coverage dwt*",
+    "clean:modules": "rimraf node_modules **/node_modules **/**/node_modules",
+    "clean:all": "pnpm run clean:top && pnpm run clean:modules",
+    "format": "prettier --write .",
+    "build": "pnpm -r --filter=./packages/* run build",
+    "build:utils": "pnpm --filter \"@domain/interface-utils\" build",
+    "prepare": "pnpm run format && husky install",
+    "dev:playground": "pnpm --filter \"./playground\" run dev",
+    "release": "ts-node scripts/release.ts",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "dev": "vite",
+    "test:pet": "vitest --config ./vitest.pet.ts run",
+    "test:ui": "vitest --ui",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@winner-fed/cloud-utils": "^1.1.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.23.1",
+    "@vitest/ui": "^0.22.1",
+    "@types/minimist": "^1.2.2",
+    "@types/prompts": "^2.0.14",
+    "@types/semver": "^7.3.12",
+    "chalk": "^4.1.0",
+    "conventional-changelog-cli": "^2.0.31",
+    "enquirer": "^2.3.2",
+    "execa": "^4.0.2",
+    "husky": "^8",
+    "jsdom": "^20.0.0",
+    "kolorist": "^1.6.0",
+    "lint-staged": "^13",
+    "minimist": "^1.2.6",
+    "prettier": "^2.6.2",
+    "prompts": "^2.4.2",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.7",
+    "shelljs": "^0.8.5",
+    "inquirer": "8.2.4",
+    "node-ssh": "^13.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0",
+    "vitest": "^0.22.1",
+    "yorkie": "^2.0.0",
+    "zip-local": "^0.3.5"
+  }
+}
